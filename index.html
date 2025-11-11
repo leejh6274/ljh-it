@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="css/magnific-popup.css">
 
 	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
 
 	<link rel="stylesheet" href="css/ionicons.min.css">
 
@@ -23,6 +25,63 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99999; /* 모달이 제일 위로 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(4px);
+  overflow: hidden; /* 배경 스크롤 방지 */
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  z-index: 100000; /* 안전하게 한 단계 더 */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 100001;
+}
+
+.screenshot-slider img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  max-height: 80vh;
+}
+
+/* slick 화살표 살짝 더 보기 좋게 */
+.slick-prev:before,
+.slick-next:before {
+  color: #fff;
+  font-size: 28px;
+}
+
+body.modal-open {
+  overflow: hidden; /* 모달 열릴 때 배경 스크롤 금지 */
+}
+
+</style>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -199,68 +258,35 @@
 								<span class="date">2023.08 ~ 재직중</span>
 								<h2>Full Stack Developer</h2>
 								<span class="position">(주)청담홀딩스</span><p></p>
-								<!-- <p>
-									· 2023년도 요양원 재가센터 ERP 프로그램 개발 및 4대보험 등 연계 응용 프로그램 개발<br />
-									· 저출생 문제 해결을 위한 난임 시술 빅데이터 기반 혁신 서비스 플랫폼 구축<br />
-									· (주)하나마이크론 CMS 운영 및 유지·보수<br />
-									· (사)한국친환경농업협회 CMS 운영 및 유지·보수<br />
-									· 초·중·고 학생 체육 활동 관리 시스템(PEGMS) 서버 환경 구축 및 유지·보수
-								</p> -->
 								<b class="text-primary">기술 스택</b>
-								<!-- <p>Java, JavaScript, JSP, jQuery, eGovframework, springframework, iBatis, MyBatis, MySQL, Python</p> -->
 									<p>
 										<img src="https://img.shields.io/badge/Html-E34F26?style=flat-square&amp;logo=Html5&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/CSS-1572B6?style=flat-square&amp;logo=CSS3&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/BootStrap-7952B3?style=flat-square&amp;logo=BootStrap&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&amp;logo=JavaScript&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/jQuery-0769AD?style=flat-square&amp;logo=jQuery&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&amp;logo=React&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/Java 8-007396?style=flat-square&amp;logo=Java&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/Java 11-007396?style=flat-square&amp;logo=Java&amp;logoColor=white" style="zoom:150%; float: left">
+										<img src="https://img.shields.io/badge/Java-007396?style=flat-square&amp;logo=Java&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/Spring Framework-6DB33F?style=flat-square&amp;logo=Spring&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/Maven-C71A36?style=flat-square&amp;logo=ApacheMaven&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=flat-square&amp;logo=SpringBoot&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/Gradle-02303A?style=flat-square&amp;logo=Gradle&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/Spring MVC-6DB33F?style=flat-square&amp;logo=Spring&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/Spring Data JPA-6DB33F?style=flat-square&amp;logo=Spring&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/Hibernate-59666C?style=flat-square&amp;logo=Hibernate&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/Spring Security-6DB33F?style=flat-square&amp;logo=Spring Security&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/JWT-000000?style=flat-square&amp;logo=JSON Web Tokens&amp;logoColor=white" style="zoom:150%; float: left">
-										<img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat-square&amp;logo=Thymeleaf&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&amp;logo=Oracle&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&amp;logo=MySQL&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&amp;logo=Git&amp;logoColor=white" style="zoom:150%; float: left">
 										<img src="https://img.shields.io/badge/SVN-809CC9?style=flat-square&amp;logo=Subversion&amp;logoColor=white" style="zoom:150%; float: left"> 
+										<img src="https://img.shields.io/badge/Linux-809CC9?style=flat-square&amp;logo=Subversion&amp;logoColor=white" style="zoom:150%; float: left"> 
 									</p>
 								<br><br><br><br><br><b class="text-primary">주요 업무 </b>
 								<div>
-									<div> - 2023년 계룡대(해군) 데이터이관 사업 (2023.08 ~ 2024.01)</div>
-									<div> - 2023년도 요양원 재가센터 ERP 프로그램 개발 및 4대보험 등 연계 응용 프로그램 개발 (2024.02 ~ 2025.08)</div>
-									<div> - 저출생 문제 해결을 위한 난임 시술 빅데이터 기반 혁신 서비스 플랫폼 구축 (2024.07 ~ 2024.12)</div>
-									<div> - 다수의 사내 자체 개발 CMS 분기별 정기 기능 개선 업데이트 및 고객사 요청 사항 대응 (2024.10 ~)</div>
-									<div> - 초·중·고 학생 체육 활동 관리 시스템(PEGMS) 서버 환경 구축 및 유지·보수 (2025.07 ~)</div>
-									<div> - FAQ 챗봇 질의응답 성능 향상을 위한 PyTorch 기반 자연어 처리 모델 파인튜닝 수행 (2025.09 ~)</div>
+									<div> - 2023년 계룡대(해군) 데이터이관 사업</div>
+									<div> - 2023년도 요양원 재가센터 ERP 프로그램 개발 및 4대보험 등 연계 응용 프로그램 개발</div>
+									<div> - 저출생 문제 해결을 위한 난임 시술 빅데이터 기반 혁신 서비스 플랫폼 구축</div>
+									<div> - 다수의 사내 자체 개발 CMS 분기별 정기 기능 개선 업데이트 및 고객사 요청 사항 대응</div>
+									<div> - 초·중·고 학생 체육 활동 관리 시스템(PEGMS) 서버 환경 구축 및 유지·보수</div>
+									<div> - FAQ 챗봇 질의응답 성능 향상을 위한 PyTorch 기반 자연어 처리 모델 파인튜닝 수행</div>
 								</div>
 							</div>
 
 						</div>
-						<!-- <div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2023.08 ~ 2024.01</span>
-								<h2>Data Migration</h2>
-								<span class="position">국방통합데이터센터(파견)</span><p></p>
-								<b class="text-primary">기술 스택</b>
-								<p>Java, JavaScript, JSP, Linux, eGovframework, iBatis, MySQL</p>
-								<b class="text-primary">주요 업무 </b>
-								<p>
-									- 데이터 이전 및 기존 시스템에서 신규 시스템으로의 데이터 이관 수행<br>
-									- DB 구조 분석, 검증 절차 수행, 데이터 정합성 확인 및 오류 처리
-								</p>
-							</div>
-						</div> -->
 					</div>
 					<div id="page-3" class="page three">
 						<h2 class="heading">Skills</h2>
@@ -283,26 +309,12 @@
 										</div>
 									</div>
 									<!-- END -->
-
-									<!-- Demo info -->
-									<!-- <div class="row text-center mt-4">
-										<div class="col-6 border-right">
-											<div class="h4 font-weight-bold mb-0">28%</div><span
-												class="small text-gray">Last week</span>
-										</div>
-										<div class="col-6">
-											<div class="h4 font-weight-bold mb-0">60%</div><span
-												class="small text-gray">Last month</span>
-										</div>
-									</div> -->
-									<!-- END -->
 								</div>
 							</div>
 
 							<div class="col-lg-4 mb-4">
 								<div class="bg-white rounded-lg shadow p-4">
 									<h2 class="h5 font-weight-bold text-center mb-4">JavaScript</h2>
-
 									<!-- Progress bar 1 -->
 									<div class="progress mx-auto" data-value='80'>
 										<span class="progress-left">
@@ -316,19 +328,6 @@
 											<div class="h2 font-weight-bold">80<sup class="small">%</sup></div>
 										</div>
 									</div>
-									<!-- END -->
-
-									<!-- Demo info -->
-									<!-- <div class="row text-center mt-4">
-										<div class="col-6 border-right">
-											<div class="h4 font-weight-bold mb-0">28%</div><span
-												class="small text-gray">Last week</span>
-										</div>
-										<div class="col-6">
-											<div class="h4 font-weight-bold mb-0">60%</div><span
-												class="small text-gray">Last month</span>
-										</div>
-									</div> -->
 									<!-- END -->
 								</div>
 							</div>
@@ -350,19 +349,6 @@
 											<div class="h2 font-weight-bold">75<sup class="small">%</sup></div>
 										</div>
 									</div>
-									<!-- END -->
-
-									<!-- Demo info -->
-									<!-- <div class="row text-center mt-4">
-										<div class="col-6 border-right">
-											<div class="h4 font-weight-bold mb-0">28%</div><span
-												class="small text-gray">Last week</span>
-										</div>
-										<div class="col-6">
-											<div class="h4 font-weight-bold mb-0">60%</div><span
-												class="small text-gray">Last month</span>
-										</div>
-									</div> -->
 									<!-- END -->
 								</div>
 							</div>
@@ -445,19 +431,9 @@
 							<div class="text pl-3">
 								<span class="date">2023.08 ~ 2024.01</span>
 								<div class="d-flex">
-									<h2>2023년 계룡대(해군) 데이터이관 사업</h2>&nbsp;
-									&nbsp;<div>
-										<a class="btn btn-outline-secondary" target="_blank"
-											href="/images/project_1_screenshot.png">스크린샷</a>
-											&nbsp;
-										<a
-										
-										class="btn btn-outline-secondary" target="_blank"
-											href="https://www.wellytravel.com/">Link</a>
-									</div>
+									<h2>2023년 계룡대(해군) 데이터이관 사업</h2>&nbsp;&nbsp;
 								</div>
-								
-								<div> <b class="text-dark">기술 스택 : </b>&nbsp;Linux, eGovframework, WebLogic, OracleDB, MySQL</div>
+								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;Linux, eGovframework, WebLogic, OracleDB, MySQL</div> -->
 								<div> <b class="text-dark">주요 내용 : </b> <br>- 데이터 이전 및 기존 시스템에서 신규 시스템으로의 데이터 이관 수행<br>- DB 구조 분석, 검증 절차 수행, 데이터 정합성 확인 및 오류 처리 </div>
 							</div>
 						</div>
@@ -469,17 +445,24 @@
 								<span class="date">2024.02 ~ 2025.08</span>
 								<div class="d-flex">
 									<h2>2023년도 요양원 재가센터 ERP 프로그램 개발 및 4대보험 등 연계 응용 프로그램 개발 &nbsp;
-										<a class="btn btn-outline-secondary" target="_blank"
-											href="/images/project_1_screenshot.png">스크린샷</a>
-											&nbsp;
-										<a
-										
-										class="btn btn-outline-secondary" target="_blank"
-											href="https://www.wellytravel.com/">Link</a></h2>
-									
+										<!-- <a class="btn btn-outline-secondary" target="_blank"
+											href="/images/project_1_screenshot.png">스크린샷</a> -->
+									<button class="btn btn-outline-secondary" id="openModalBtn">스크린샷</button>
 								</div>
-								
-								<div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div>
+<!-- 모달 영역 -->
+<div id="screenshotModal" class="modal">
+	<div class="modal-content">
+    	<span class="close">&times;</span>
+    	<div class="screenshot-slider">
+      		<div><img src="/images/staff-1.jpg" alt="스크린샷1"></div>
+			<div><img src="/images/staff-2.jpg" alt="스크린샷2"></div>
+			<div><img src="/images/staff-3.jpg" alt="스크린샷3"></div>
+		</div>
+	</div>
+</div>
+
+
+								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
 								<div> <b class="text-dark">주요 내용 : </b> <br>- 장기요양 수급자 관리·간호, 시설 운영·점검, 급여수가·청구 관리, 이동서비스 관리, 리포트 출력 등 시스템 주요 기능 개발 및 기능 개선 지원 </div>
 							</div>
 						</div>
@@ -494,14 +477,11 @@
 										<a class="btn btn-outline-secondary" target="_blank"
 											href="/images/project_1_screenshot.png">스크린샷</a>
 											&nbsp;
-										<a
-										
-										class="btn btn-outline-secondary" target="_blank"
-											href="https://www.wellytravel.com/">Link</a></h2>
-									
+										<a class="btn btn-outline-secondary" target="_blank"
+											href="https://www.wellytravel.com/">Link</a>
+									</h2>
 								</div>
-								
-								<div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, API, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div>
+								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, API, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
 								<div> <b class="text-dark">주요 내용 : </b> <br>- 웹 CMS 구축 및 기능 개발, 프로젝트 환경 구성, 디자인/콘텐츠 관리 기능 구현 </div>
 							</div>
 						</div>
@@ -522,8 +502,7 @@
 										<a class="btn btn-outline-secondary" target="_blank" href="https://www.wellytravel.com/">Link2</a>
 									</h2>
 								</div>
-								
-								<div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div>
+								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
 								<div> <b class="text-dark">주요 내용 : </b> <br>- CMS 분기별 정기 기능 개선 업데이트 및 고객사 요청 사항 대응 </div>
 							</div>
 						</div>
@@ -538,14 +517,11 @@
 										<a class="btn btn-outline-secondary" target="_blank"
 											href="/images/project_1_screenshot.png">스크린샷</a>
 											&nbsp;
-										<a
-										
-										class="btn btn-outline-secondary" target="_blank"
-											href="https://www.wellytravel.com/">Link</a></h2>
-									
+										<a class="btn btn-outline-secondary" target="_blank"
+											href="https://www.wellytravel.com/">Link</a>
+									</h2>
 								</div>
-								
-								<div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div>
+								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
 								<div> <b class="text-dark">주요 내용 : </b> <br>- 기능 개발 및 서버 환경 구축 </div>
 							</div>
 						</div>
@@ -670,7 +646,9 @@
 
 
 	<script src="js/jquery.min.js"></script>
+	
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
@@ -681,9 +659,54 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
-
 	<script src="js/main.js"></script>
 
+
+
+	<script>
+	$(document).ready(function () {
+  const modal = $('#screenshotModal');
+  let slickInitialized = false;
+
+  // 모달 열기
+  $('#openModalBtn').on('click', function () {
+    modal.fadeIn();
+    $('body').addClass('modal-open');
+
+    // 모달이 실제로 보여진 뒤에 slick 초기화 (한 번만)
+    if (!slickInitialized) {
+      setTimeout(() => {
+        $('.screenshot-slider').slick({
+          arrows: true,
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          adaptiveHeight: true
+        });
+        slickInitialized = true;
+      }, 100); // 약간의 딜레이를 줘야 정상적으로 렌더링됨
+    }
+  });
+
+  // 닫기 버튼 클릭
+  $('.close').on('click', function () {
+    modal.fadeOut();
+    $('body').removeClass('modal-open');
+  });
+
+  // 모달 바깥(배경) 클릭 시 닫기
+  $(document).on('click', function (e) {
+    if ($(e.target).closest('.modal-content').length === 0 && $(e.target).is('#screenshotModal')) {
+      modal.fadeOut();
+      $('body').removeClass('modal-open');
+    }
+  });
+});
+
+
+
+	</script>
 </body>
 
 </html>

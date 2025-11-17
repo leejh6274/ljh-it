@@ -45,12 +45,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #111;
-  padding: 20px;
   border-radius: 10px;
   width: 90%;
   max-width: 900px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   z-index: 100000; /* 안전하게 한 단계 더 */
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #ddd;     /* 기본 점 색 */
+  opacity: 0.8;
+}
+
+/* 현재 보고 있는 슬라이드의 dot */
+.slick-dots li.slick-active button:before {
+  color: #ffcc00;   /* 노란색 */
+  opacity: 1;
 }
 
 .close {
@@ -70,12 +81,6 @@
   max-height: 80vh;
 }
 
-/* slick 화살표 살짝 더 보기 좋게 */
-.slick-prev:before,
-.slick-next:before {
-  color: #fff;
-  font-size: 28px;
-}
 
 body.modal-open {
   overflow: hidden; /* 모달 열릴 때 배경 스크롤 금지 */
@@ -449,21 +454,11 @@ body.modal-open {
 											href="/images/project_1_screenshot.png">스크린샷</a> -->
 									<button class="btn btn-outline-secondary" id="openModalBtn">스크린샷</button>
 								</div>
-<!-- 모달 영역 -->
-<div id="screenshotModal" class="modal">
-	<div class="modal-content">
-    	<span class="close">&times;</span>
-    	<div class="screenshot-slider">
-      		<div><img src="/images/staff-1.jpg" alt="스크린샷1"></div>
-			<div><img src="/images/staff-2.jpg" alt="스크린샷2"></div>
-			<div><img src="/images/staff-3.jpg" alt="스크린샷3"></div>
-		</div>
-	</div>
-</div>
 
 
-								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
-								<div> <b class="text-dark">주요 내용 : </b> <br>- 장기요양 수급자 관리·간호, 시설 운영·점검, 급여수가·청구 관리, 이동서비스 관리, 리포트 출력 등 시스템 주요 기능 개발 및 기능 개선 지원 </div>
+
+				<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
+						<div> <b class="text-dark">주요 내용 : </b> <br>- 장기요양 수급자 관리·간호, 시설 운영·점검, 급여수가·청구 관리, 이동서비스 관리, 리포트 출력 등 시스템 주요 기능 개발 및 기능 개선 지원 </div>
 							</div>
 						</div>
 						<div class="resume-wrap d-flex ftco-animate">
@@ -475,10 +470,7 @@ body.modal-open {
 								<div class="d-flex">
 									<h2>저출생 문제 해결을 위한 난임 시술 빅데이터 기반 혁신 서비스 플랫폼 구축 &nbsp;
 										<a class="btn btn-outline-secondary" target="_blank"
-											href="/images/project_1_screenshot.png">스크린샷</a>
-											&nbsp;
-										<a class="btn btn-outline-secondary" target="_blank"
-											href="https://www.wellytravel.com/">Link</a>
+											href="http://du-dreami.com/">Link</a>
 									</h2>
 								</div>
 								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, API, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
@@ -493,13 +485,9 @@ body.modal-open {
 								<span class="date">2024.10 ~ </span>
 								<div class="d-flex">
 									<h2>다수의 사내 자체 개발 CMS 분기별 정기 기능 개선 업데이트 및 고객사 요청 사항 대응 &nbsp;
-										<a class="btn btn-outline-secondary" target="_blank" href="/images/project_1_screenshot.png">스크린샷1</a>
+										<a class="btn btn-outline-secondary" target="_blank" href="https://www.korganicboard.org/">Link1</a>
 											&nbsp;
-										<a class="btn btn-outline-secondary" target="_blank" href="https://www.wellytravel.com/">Link1</a>
-											&nbsp;
-										<a class="btn btn-outline-secondary" target="_blank" href="/images/project_1_screenshot.png">스크린샷2</a>
-											&nbsp;
-										<a class="btn btn-outline-secondary" target="_blank" href="https://www.wellytravel.com/">Link2</a>
+										<a class="btn btn-outline-secondary" target="_blank" href="https://www.hanamicron.com/">Link2</a>
 									</h2>
 								</div>
 								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
@@ -516,9 +504,6 @@ body.modal-open {
 									<h2>초·중·고 학생 체육 활동 관리 시스템(PEGMS) 서버 환경 구축 및 유지·보수 &nbsp;
 										<a class="btn btn-outline-secondary" target="_blank"
 											href="/images/project_1_screenshot.png">스크린샷</a>
-											&nbsp;
-										<a class="btn btn-outline-secondary" target="_blank"
-											href="https://www.wellytravel.com/">Link</a>
 									</h2>
 								</div>
 								<!-- <div> <b class="text-dark">기술 스택 : </b>&nbsp;JAVA, JSP, JavaScript, jQuery, SpringMVC, eGovframework, MySQL, HTML5, CSS3</div> -->
@@ -542,7 +527,7 @@ body.modal-open {
 				</div>
 			</div>
 			<div class="row no-gutters">
-				<div class="col-md-4">
+				<div class="col-md-4" style="margin-left:20px; margin-right: 20px; border: rgb(54, 54, 153) 3px solid;">
 					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
 						style="background-image: url(images/DCCC.png); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
 						<div class="overlay"></div>
@@ -553,9 +538,9 @@ body.modal-open {
 					</div>
 				</div>
 
-				<div class="col-md-4">
+				<div class="col-md-4" style="margin-left:20px; margin-right: 20px; border: rgb(54, 54, 153) 3px solid;">
 					<div class="project img ftco-animate d-flex justify-content-center align-items-center"
-						style="background-image: url(images/work-6.jpg);">
+						style="background-image: url(images/demys2.jpg); background-size: 100% 100%; background-position: center; background-repeat: no-repeat;">
 						<div class="overlay"></div>
 						<div class="text text-left p-4">
 							<h3><b style="color:white">DEMYS <br> - PMS 개발</b></h3>
@@ -677,7 +662,7 @@ body.modal-open {
     if (!slickInitialized) {
       setTimeout(() => {
         $('.screenshot-slider').slick({
-          arrows: true,
+          arrows: false,
           dots: true,
           infinite: true,
           speed: 300,
@@ -688,6 +673,11 @@ body.modal-open {
       }, 100); // 약간의 딜레이를 줘야 정상적으로 렌더링됨
     }
   });
+
+  // 이미지 클릭 시 다음 슬라이드로 이동
+$('.screenshot-slider').on('click', 'img', function () {
+  $('.screenshot-slider').slick('slickNext');
+});
 
   // 닫기 버튼 클릭
   $('.close').on('click', function () {
@@ -707,6 +697,24 @@ body.modal-open {
 
 
 	</script>
+
+
+		<!-- 모달 영역 -->
+		<div id="screenshotModal" class="modal">
+			<div class="modal-content">
+				<div class="screenshot-slider">
+					<div><img src="/images/erp1.png" alt="스크린샷1"></div>
+					<div><img src="/images/erp2.png" alt="스크린샷2"></div>
+					<div><img src="/images/erp3.png" alt="스크린샷3"></div>
+					<div><img src="/images/erp4.png" alt="스크린샷4"></div>
+					<div><img src="/images/erp5.png" alt="스크린샷5"></div>
+					<div><img src="/images/erp6.png" alt="스크린샷6"></div>
+					<div><img src="/images/erp7.png" alt="스크린샷7"></div>
+					<div><img src="/images/erp8.png" alt="스크린샷8"></div>
+					<div><img src="/images/erp9.png" alt="스크린샷9"></div>
+				</div>
+			</div>
+		</div>
 </body>
 
 </html>
